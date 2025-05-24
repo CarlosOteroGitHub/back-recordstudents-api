@@ -17,6 +17,7 @@ class CreateEstudiantesTable extends Migration
             $table->id();
             $table->string('nombre');
             $table->string('nacimiento');
+            $table->string('correo');
             $table->timestamps();
         });
     }

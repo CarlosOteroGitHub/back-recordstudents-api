@@ -14,7 +14,8 @@ class AsistenciaController extends Controller
      */
     public function index()
     {
-        return response()->json(Asistencia::all());
+        $asistencias = Asistencia::with(['estudiante', 'sesion'])->get();
+        return response()->json($asistencias);
     }
 
     /**

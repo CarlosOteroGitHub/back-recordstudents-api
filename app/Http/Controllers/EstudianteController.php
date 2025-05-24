@@ -38,6 +38,7 @@ class EstudianteController extends Controller
         $validated = $request->validate([
             'nombre' => 'required|string|max:100',
             'nacimiento' => 'required|string|max:30',
+            'correo' => 'required|string|max:100',
         ]);
         $estudiante = Estudiante::create($validated);
         return response()->json($estudiante, 201);
